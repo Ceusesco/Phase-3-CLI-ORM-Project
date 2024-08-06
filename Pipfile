@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+click = "8.1.7"
+sqlalchemy = "2.0.31"
+
+[dev-packages]
+pytest = "8.3.2"
+
+[requires]
+python_version = "3.8"
