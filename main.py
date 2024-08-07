@@ -10,7 +10,7 @@ from lib.models.rating import Rating
 
 
 # #Create an engine [added from debbugging]
-# engine = create_engine ('sqlite:///lib.db')
+engine = create_engine ('sqlite:///lib.db')
 
 # Create all tables in the engine (database)
 Base.metadata.create_all(engine)

@@ -39,8 +39,6 @@ class Menu(Base):
     def get_all(cls, session):
         return session.query(cls).all()
 
-    @classmethod
-    # def find_by_id(cls, session, menu_id):
-        
+    @classmethod 
     def get_by_id(cls, session, menu_id):
         return session.query(cls).filter_by(id=menu_id).first()
