@@ -1,12 +1,4 @@
-# from sqlalchemy import Column, Integer, String
-# from lib.models.database import Base
-
-# class Menu(Base):
-#     __tablename__ = 'menus'
-#     id = Column(Integer, primary_key=True)
-#     meal_type = Column(String)  # e.g., breakfast, lunch, dinner, specialties
-#     item = Column(String)
-
+# 
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship, validates
@@ -41,11 +33,14 @@ class Menu(Base):
             session.commit()
         return menu
 
+
+    
     @classmethod
     def get_all(cls, session):
         return session.query(cls).all()
-    
-    @classmethod
-    def find_by_id(cls, session, menu_id):
-        return session.query(cls).filter_by(id=menu_id).first()
 
+    @classmethod
+    # def find_by_id(cls, session, menu_id):
+        
+    def get_by_id(cls, session, menu_id):
+        return session.query(cls).filter_by(id=menu_id).first()
